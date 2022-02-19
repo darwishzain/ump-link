@@ -21,15 +21,15 @@ By using our solution, you can access the website with a click of a button and i
 
 ### Devlog
 * Version 0.1.5
-  - added link for UMP KALAM website (https://kalam.ump.edu.my)
-  - added link for UMP ECommunity website (https://community.ump.edu.my)
-  - added link for UMP Open Registration website (https://or.ump.edu.my)
-  - added link for UMP Digital Assessment System website (https://udas.ump.edu.my)
+  - added link for UMP KALAM website ```https://kalam.ump.edu.my```
+  - added link for UMP ECommunity website ```https://community.ump.edu.my```
+  - added link for UMP Open Registration website ```https://or.ump.edu.my```
+  - added link for UMP Digital Assessment System website ```https://udas.ump.edu.my```
 
 ![v0.1.5](img/ump-link-v0.1.5.png)
 
 * Version 0.1.6 (development)
-  - added link for UMP EFind website (https://efind.ump.edu.my)
-  - added link for donation (https://ko-fi/darwishzain)
+  - added link for UMP EFind website ```https://efind.ump.edu.my```
+  - added link for donation ```https://ko-fi/darwishzain```
 
 ![v0.1.5](img/ump-link-v0.1.6-dev.png)
