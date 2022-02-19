@@ -20,7 +20,7 @@ By using our solution, you can access the website with a click of a button and i
 4. Open file ```ump-link.exe```.
 
 ### Devlog
-* Version 0.1.5
+* **Version 0.1.5**
   - added link for UMP KALAM website ```https://kalam.ump.edu.my```
   - added link for UMP ECommunity website ```https://community.ump.edu.my```
   - added link for UMP Open Registration website ```https://or.ump.edu.my```
@@ -28,7 +28,7 @@ By using our solution, you can access the website with a click of a button and i
 
 ![v0.1.5](img/ump-link-v0.1.5.png)
 
-* Version 0.1.6 (development)
+* **Version 0.1.6 (development)**
   - added link for UMP EFind website ```https://efind.ump.edu.my```
   - added link for donation ```https://ko-fi/darwishzain```
 
