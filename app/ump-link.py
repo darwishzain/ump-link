@@ -1,4 +1,4 @@
-import tkinter as tk
+import Tkinter as tk
 #! linux : Tkinter
 #! win10 : tkinter
 import os,sys
@@ -85,7 +85,7 @@ umplink()
 appopen()
 devlink()
 
-root.iconbitmap('./icon.ico')
+#root.iconbitmap('icon.ico')
 root.eval('tk::PlaceWindow . center')#? Application apppear at center of screen
 root.mainloop()
 
