@@ -21,15 +21,21 @@ By using our solution, you can access the website with a click of a button and i
 
 ### Devlog
 * **Version 0.1.5**
+  - ![v0.1.5](img/ump-link-v0.1.5.png)
+
   - added link for UMP KALAM website ```https://kalam.ump.edu.my```
   - added link for UMP ECommunity website ```https://community.ump.edu.my```
   - added link for UMP Open Registration website ```https://or.ump.edu.my```
   - added link for UMP Digital Assessment System website ```https://udas.ump.edu.my```
 
-![v0.1.5](img/ump-link-v0.1.5.png)
 
-* **Version 0.1.6 (development)**
-  - added link for UMP EFind website ```https://efind.ump.edu.my```
-  - added link for donation ```https://ko-fi/darwishzain```
-
-![v0.1.5](img/ump-link-v0.1.6-dev.png)
+* **Version 0.1.6**
+  - ![v0.1.6](img/ump-link-v0.1.6.png)
+  - added link for developerr's affiliate links. (Using the link to access any of the service listed there as seen below might help developers in some way) ```https://darwishzain.com/link.php``` ![v0.1.6](img/link-page.png)
+  - added link for UMP Library (EFind) website ```https://efind.ump.edu.my```
+  - added link for users to make donation to support the project ```https://ko-fi/darwishzain```
+  - Added button for starting Visual Studio Code
+  - Added button for starting Github Desktop
+  - Added button for starting Browser
+  - Added a working digital clock ```HH:MM:SS``` and date ```DD/MM/YY```
+  - Added button to close application ```Working```, maximize ```Not Working``` and minimize ```Not Working```
