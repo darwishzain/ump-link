@@ -19,27 +19,39 @@ time.sleep(1)
 root = tk.Tk()
 root.title(label+" "+version)
 
+runLine = [
+    ["code","code", "VSCode", 0, 0],
+    ["github", "github", "Github", 0, 1],
+    ["browser", "https://google.com", "Browser", 0, 2]
+    ]
+
+webLine = [
+    ["kalam-ump", "https://kalam.ump.edu.my", "KALAM", 0, 0],
+    ["ecomm-ump", "https://community.ump.edu.my", "ECOMM", 0, 1],
+    ["or-ump", "https://or.ump.edu.my", "OR UMP", 0, 2],
+    ["udas-ump", "https://udas.ump.edu.my", "UDAS", 0, 3],
+    ["efind-ump", "https://efind.ump.edu.my", "EFind", 0, 4]
+    ]
+
+devLine =[
+    ["project", "https://studio.darwishzain.com/project", "Other Project", 0, 0],
+    ["github", "https://github.com/darwishzain", "More Code", 0, 3],
+    ["donate", "https://ko-fi.com/darwishzain", "Donate", 0, 4],
+    ["affiliate", "https://darwishzain.com/link.php", "Affiliate", 0, 5]
+    ]
 file = './data/command.csv'
 
-#? csv format: id, command, displayname, row, column
-line = []#* array variable for data from csv file
-with open(file) as csvfile:
-    reader = csv.reader(csvfile)
-    for row in reader:
-        line.append(row)
-    # array : line
 
-#print(line)#* checking if data from csv file came through
 #? runFrame cli command
 def command(cmd):
-    os.system(cmd)
+    os.system(str(cmd))
 
 def openlink(link):
     if os.name == 'posix':
         link='xdg-open '+link
     elif os.name == 'nt':
-        link = 'explorer'+link
-    os.system(link)
+        link = 'explorer '+link
+    os.system(str(link))
 
 #? frame where the button is in
 mainFrame = tk.Frame(root, bg='#F0F0F0', height=300, width=500)
@@ -90,37 +102,39 @@ def updateTime():
     root.after(1000,updateTime)
 
 def webBtn():
-    kalamBtn = tk.Button(webFrame, bg='#F0F0F0', height=5, width=10, text=line[0][2],command=lambda:openlink(line[0][1]), relief='flat')
-    kalamBtn.grid(row=line[0][3], column=line[0][4])
-    ecommBtn = tk.Button(webFrame, height=5, width=10, text=line[1][2],command=lambda:openlink(line[1][1]), relief='flat')
-    ecommBtn.grid(row=line[1][3], column=line[1][4])
-    orBtn = tk.Button(webFrame, height=5, width=10, text=line[2][2],command=lambda:openlink(line[2][1]), relief='flat')
-    orBtn.grid(row=line[2][3], column=line[2][4])
-    udasBtn = tk.Button(webFrame, height=5, width=10, text=line[3][2],command=lambda:openlink(line[3][1]), relief='flat')
-    udasBtn.grid(row=line[3][3], column=line[3][4])
-    efindBtn = tk.Button(webFrame, height=5, width=10, text=line[4][2],command=lambda:openlink(line[4][1]), relief='flat')
-    efindBtn.grid(row=line[4][3], column=line[4][4])
+    kalamBtn = tk.Button(webFrame, bg='#F0F0F0', height=5, width=10, text=webLine[0][2],command=lambda:openlink(webLine[0][1]), relief='flat')
+    kalamBtn.grid(row=webLine[0][3], column=webLine[0][4])
+    ecommBtn = tk.Button(webFrame, height=5, width=10, text=webLine[1][2],command=lambda:openlink(webLine[1][1]), relief='flat')
+    ecommBtn.grid(row=webLine[1][3], column=webLine[1][4])
+    orBtn = tk.Button(webFrame, height=5, width=10, text=webLine[2][2],command=lambda:openlink(webLine[2][1]), relief='flat')
+    orBtn.grid(row=webLine[2][3], column=webLine[2][4])
+    udasBtn = tk.Button(webFrame, height=5, width=10, text=webLine[3][2],command=lambda:openlink(webLine[3][1]), relief='flat')
+    udasBtn.grid(row=webLine[3][3], column=webLine[3][4])
+    efindBtn = tk.Button(webFrame, height=5, width=10, text=webLine[4][2],command=lambda:openlink(webLine[4][1]), relief='flat')
+    efindBtn.grid(row=webLine[4][3], column=webLine[4][4])
 
 def runBtn():
-    codeBtn = tk.Button(runFrame, bg='#F0F0F0', height=5, width=10, text=line[5][2], command=lambda:command(line[5][1]), relief='flat')
-    codeBtn.grid(row=0, column=0)
-    githubBtn = tk.Button(runFrame, bg='#F0F0F0', height=5, width=10, text=line[6][2], command=lambda:command(line[6][1]), relief='flat')
-    githubBtn.grid(row=0, column=1)
+    codeBtn = tk.Button(runFrame, bg='#F0F0F0', height=5, width=10, text=runLine[0][2], command=lambda:command(runLine[0][1]), relief='flat')
+    codeBtn.grid(row=runLine[0][3], column=runLine[0][4])
+    githubBtn = tk.Button(runFrame, bg='#F0F0F0', height=5, width=10, text=runLine[1][2], command=lambda:command(runLine[1][1]), relief='flat')
+    githubBtn.grid(row=runLine[1][3], column=runLine[1][4])
+    browserBtn = tk.Button(runFrame, bg="#F0F0F0", height=5, width=10, text=runLine[2][2], command=lambda:openlink(runLine[2][1]), relief="flat")
+    browserBtn.grid(row=runLine[2][3], column=runLine[2][4])
 
 def devBtn():
     #? button to link Darwish Zain's webFrame
-    devsite = tk.Button(devFrame, text=line[7][2], command=lambda:openlink(line[7][1]), relief='flat')
-    devsite.grid(row=line[7][3], column=line[7][4], columnspan=3, sticky='nesw')
+    devsite = tk.Button(devFrame, text=devLine[0][2], command=lambda:openlink(devLine[0][1]), relief='flat')
+    devsite.grid(row=devLine[0][3], column=devLine[0][4], columnspan=3, sticky='nesw')
 
     #? button to link Darwish Zain's github
-    github = tk.Button(devFrame, text=line[8][2], command=lambda:openlink(line[8][1]), relief='flat')
-    github.grid(row=line[8][3], column=line[8][4], columnspan=1, sticky='nesw')
+    github = tk.Button(devFrame, text=devLine[1][2], command=lambda:openlink(devLine[1][1]), relief='flat')
+    github.grid(row=devLine[1][3], column=devLine[1][4], columnspan=1, sticky='nesw')
 
-    donate = tk.Button(devFrame, bg='#00AC9F', fg='#FFFFFF', text=line[9][2], command=lambda:openlink(line[9][1]), relief='flat')
-    donate.grid(row=line[9][3], column=line[9][4], columnspan=1, sticky='nesw')
+    donate = tk.Button(devFrame, bg='#00AC9F', fg='#FFFFFF', text=devLine[2][2], command=lambda:openlink(devLine[2][1]), relief='flat')
+    donate.grid(row=devLine[2][3], column=devLine[2][4], columnspan=1, sticky='nesw')
 
-    affiliate = tk.Button(devFrame, bg='#2E6DB4', fg='#FFFFFF', text=line[10][2], command=lambda:openlink(line[10][1]), relief='flat')
-    affiliate.grid(row=line[10][3], column=line[10][4], columnspan=1, sticky='nesw')
+    affiliate = tk.Button(devFrame, bg='#2E6DB4', fg='#FFFFFF', text=devLine[3][2], command=lambda:openlink(devLine[3][1]), relief='flat')
+    affiliate.grid(row=devLine[3][3], column=devLine[3][4], columnspan=1, sticky='nesw')
 
 titleBar()
 startTime()
