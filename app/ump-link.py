@@ -5,11 +5,11 @@ import os,sys
 import csv
 import time
 
-label = 'UMP-link on '+ sys.platform
+appName = 'UMP-link on '+ sys.platform
 developer = 'Developed by Darwish Zain'
 version = 'Version 0.1.6 - dev'
 
-print(label)
+print(appName)
 time.sleep(1)
 print(developer)
 time.sleep(1)
@@ -17,7 +17,7 @@ print(version)
 time.sleep(1)
 
 root = tk.Tk()
-root.title(label+" "+version)
+root.title(appName+" "+version)
 
 runLine = [
     ["code","code", "VSCode", 0, 0],
@@ -122,7 +122,7 @@ def runBtn():
     browserBtn.grid(row=runLine[2][3], column=runLine[2][4])
 
 def devBtn():
-    #? button to link Darwish Zain's webFrame
+    #? button to link Darwish Zain's web
     devsite = tk.Button(devFrame, text=devLine[0][2], command=lambda:openlink(devLine[0][1]), relief='flat')
     devsite.grid(row=devLine[0][3], column=devLine[0][4], columnspan=3, sticky='nesw')
 
