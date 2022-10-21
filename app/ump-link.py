@@ -7,7 +7,7 @@ import time
 
 appName = 'UMP-link on '+ sys.platform
 developer = 'Developed by Darwish Zain'
-version = 'Version 0.1.6 - dev'
+version = 'Version 1.0.0 - akhr'
 
 print(appName)
 time.sleep(1)
@@ -34,10 +34,8 @@ webLine = [
     ]
 
 devLine =[
-    ["project", "https://studio.darwishzain.com/project", "Other Project", 0, 0],
-    ["github", "https://github.com/darwishzain", "More Code", 0, 3],
-    ["donate", "https://ko-fi.com/darwishzain", "Donate", 0, 4],
-    ["affiliate", "https://darwishzain.com/link.php", "Affiliate", 0, 5]
+    ["github", "https://github.com/darwishzain", "More Code", 0, 1],
+    ["github", "https://darwishzain.com", "Website", 0, 2]
     ]
 file = './data/command.csv'
 
@@ -122,19 +120,12 @@ def runBtn():
     browserBtn.grid(row=runLine[2][3], column=runLine[2][4])
 
 def devBtn():
-    #? button to link Darwish Zain's web
-    devsite = tk.Button(devFrame, text=devLine[0][2], command=lambda:openlink(devLine[0][1]), relief='flat')
-    devsite.grid(row=devLine[0][3], column=devLine[0][4], columnspan=3, sticky='nesw')
-
     #? button to link Darwish Zain's github
-    github = tk.Button(devFrame, text=devLine[1][2], command=lambda:openlink(devLine[1][1]), relief='flat')
-    github.grid(row=devLine[1][3], column=devLine[1][4], columnspan=1, sticky='nesw')
-
-    donate = tk.Button(devFrame, bg='#00AC9F', fg='#FFFFFF', text=devLine[2][2], command=lambda:openlink(devLine[2][1]), relief='flat')
-    donate.grid(row=devLine[2][3], column=devLine[2][4], columnspan=1, sticky='nesw')
-
-    affiliate = tk.Button(devFrame, bg='#2E6DB4', fg='#FFFFFF', text=devLine[3][2], command=lambda:openlink(devLine[3][1]), relief='flat')
-    affiliate.grid(row=devLine[3][3], column=devLine[3][4], columnspan=1, sticky='nesw')
+    github = tk.Button(devFrame, text=devLine[0][2], command=lambda:openlink(devLine[0][1]), relief='flat')
+    github.grid(row=devLine[0][3], column=devLine[0][4], columnspan=1, sticky='nesw')
+    #? button to link Darwish Zain's Website
+    website = tk.Button(devFrame, text=devLine[1][2], command=lambda:openlink(devLine[1][1]), relief='flat')
+    website.grid(row=devLine[1][3], column=devLine[1][4], columnspan=1, sticky='nesw')
 
 titleBar()
 startTime()
